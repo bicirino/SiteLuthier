@@ -28,6 +28,8 @@ luthier-website/
 
 - **Galeria (Portfolio)**: Fotos detalhadas de projetos finalizados;
 
+- **Feedbacks**: Comentários positivos sobre o serviço; 
+
 - **Serviços**: Regulagem, restauração, troca de trastes e construção;
 
 - **Sobre**: A história do luthier e sua filosofia de trabalho;
