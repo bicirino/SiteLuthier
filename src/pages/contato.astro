@@ -1,0 +1,70 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato — Oficina Luthier</title>
+  </head>
+  <body>
+    <Navbar />
+    <main class="max-w-6xl mx-auto px-6 py-20">
+      <h1 class="text-4xl font-title text-center mb-4">Entre em Contato</h1>
+      <p class="text-center text-gray-400 mb-12">Agende uma avaliação do seu instrumento ou tire suas dúvidas. Estamos prontos para ajudar.</p>
+
+      <section class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="font-title text-xl mb-6">Informações</h3>
+          <div class="space-y-4 text-gray-300">
+            <div>
+              <p class="text-sm text-gray-400 uppercase">Endereço</p>
+              <p>Rua das Cordas, 123 - Centro</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 uppercase">Telefone</p>
+              <p>(11) 99999-9999</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 uppercase">E-mail</p>
+              <p>contato@luthier.com.br</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-400 uppercase">Horário</p>
+              <p>Seg - Sex: 9h às 18h</p>
+            </div>
+          </div>
+          <div class="mt-8 bg-gray-900/50 rounded-lg p-6 text-center border border-gray-800">
+            <div class="text-3xl text-varnish mb-2">📍</div>
+            <p class="text-sm text-gray-400">Rua das Cordas, 123 - Centro<br/>São Paulo - SP</p>
+          </div>
+        </div>
+
+        <form class="space-y-4">
+          <h3 class="font-title text-xl mb-6">Envie sua Mensagem</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <input class="contact-input" placeholder="Nome" />
+            <input class="contact-input" placeholder="seu@email.com" />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <input class="contact-input" placeholder="(00) 00000-0000" />
+            <select class="contact-input">
+              <option>Selecione...</option>
+              <option>Violão</option>
+              <option>Guitarra</option>
+              <option>Baixo</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <textarea class="contact-input w-full h-32" placeholder="Descreva o serviço que você precisa..."></textarea>
+          <div>
+            <button type="submit" class="cta-palheta">Enviar Mensagem</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

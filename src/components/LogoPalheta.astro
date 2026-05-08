@@ -1,0 +1,14 @@
+---
+interface Props {
+  sizeClass?: string;
+}
+
+const logoSizeClass = Astro.props.sizeClass ?? 'w-7 h-7';
+---
+<svg class={logoSizeClass} viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" role="img">
+  <path d="M60 10C85 10 106 31 106 58C106 92 82 119 60 131C38 119 14 92 14 58C14 31 35 10 60 10Z" fill="#d12a2f"/>
+  <path d="M60 18C80 18 96 34 96 58C96 86 76 108 60 119C44 108 24 86 24 58C24 34 40 18 60 18Z" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+  <path d="M60 24C77 24 90 37 90 58C90 82 73 101 60 110C47 101 30 82 30 58C30 37 43 24 60 24Z" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <path d="M60 38C60 38 68 41 72 48C75 53 76 60 76 65C76 72 73 80 67 87C64 90 61 93 60 94C59 93 56 90 53 87C47 80 44 72 44 65C44 60 45 53 48 48C52 41 60 38 60 38Z" fill="rgba(255,255,255,0.03)"/>
+  <text x="60" y="77" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="400" fill="#f8f4ee">L</text>
+</svg>

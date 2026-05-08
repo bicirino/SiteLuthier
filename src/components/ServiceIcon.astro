@@ -1,0 +1,65 @@
+---
+export interface Props {
+  type: 'regulagem' | 'trastes' | 'reparos' | 'acabamento' | 'pestanas' | 'eletronica';
+}
+const { type } = Astro.props;
+---
+
+{type === 'regulagem' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path d="M 8 28 L 20 16 M 28 28 L 16 16 M 20 16 L 24 12 M 16 16 L 12 12"/>
+    <circle cx="26" cy="26" r="2"/>
+    <circle cx="14" cy="14" r="2"/>
+  </svg>
+)}
+
+{type === 'trastes' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M 8 12 L 32 12 M 8 18 L 32 18 M 8 24 L 32 24 M 8 30 L 32 30"/>
+    <rect x="6" y="10" width="28" height="22" rx="2"/>
+  </svg>
+)}
+
+{type === 'reparos' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path d="M 10 30 L 30 10 M 12 32 L 32 12 M 8 28 L 28 8"/>
+    <circle cx="14" cy="26" r="1.5"/>
+    <circle cx="26" cy="14" r="1.5"/>
+  </svg>
+)}
+
+{type === 'acabamento' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path d="M 8 10 Q 12 6 16 10 Q 20 14 24 10 Q 28 6 32 10"/>
+    <rect x="8" y="14" width="24" height="16" rx="2"/>
+    <line x1="14" y1="14" x2="14" y2="30"/>
+    <line x1="20" y1="14" x2="20" y2="30"/>
+    <line x1="26" y1="14" x2="26" y2="30"/>
+  </svg>
+)}
+
+{type === 'pestanas' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="10" y="8" width="20" height="24" rx="1"/>
+    <line x1="10" y1="14" x2="30" y2="14"/>
+    <line x1="10" y1="20" x2="30" y2="20"/>
+    <line x1="10" y1="26" x2="30" y2="26"/>
+    <circle cx="20" cy="12" r="1.5" fill="currentColor"/>
+  </svg>
+)}
+
+{type === 'eletronica' && (
+  <svg class="w-12 h-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <circle cx="20" cy="20" r="10"/>
+    <line x1="20" y1="12" x2="20" y2="28"/>
+    <line x1="12" y1="20" x2="28" y2="20"/>
+    <circle cx="20" cy="20" r="3"/>
+  </svg>
+)}
+
+<style>
+  svg {
+    color: #8B0000;
+    transition: all 0.3s ease;
+  }
+</style>

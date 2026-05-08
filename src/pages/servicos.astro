@@ -1,0 +1,53 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serviços — Oficina Luthier</title>
+  </head>
+  <body>
+    <Navbar />
+    <main class="max-w-6xl mx-auto px-6 py-20">
+      <h1 class="text-4xl font-title text-center mb-4">Nossos Serviços</h1>
+      <p class="text-center text-gray-400 mb-12">Oferecemos uma gama completa de serviços de luthieria, desde ajustes simples até restaurações completas de instrumentos de corda.</p>
+
+      <section class="grid md:grid-cols-3 gap-8">
+        <article class="service-card">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">🔧</div>
+          <h3 class="font-title text-xl">Regulagem Completa</h3>
+          <p class="mt-2 text-sm text-gray-300">Ajuste de action, traste, tenssor e entonação para performance ideal do seu instrumento.</p>
+        </article>
+        <article class="service-card border border-varnish/30">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">🎸</div>
+          <h3 class="font-title text-xl">Troca de Trastes</h3>
+          <p class="mt-2 text-sm text-gray-300">Substituição e nivelamento de trastes com acabamento profissional em metal de alta qualidade.</p>
+        </article>
+        <article class="service-card">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">⚙️</div>
+          <h3 class="font-title text-xl">Reparos Estruturais</h3>
+          <p class="mt-2 text-sm text-gray-300">Conserto de rachaduras, descolamentos e restauração de partes danificadas.</p>
+        </article>
+        <article class="service-card">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">✨</div>
+          <h3 class="font-title text-xl">Acabamento e Polimento</h3>
+          <p class="mt-2 text-sm text-gray-300">Restauração do verniz, polimento de ferragens e limpeza profunda completa.</p>
+        </article>
+        <article class="service-card">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">🪛</div>
+          <h3 class="font-title text-xl">Pestanas e Rastilhos</h3>
+          <p class="mt-2 text-sm text-gray-300">Fabricação e instalação de pestanas em osso, tusq ou materiais sintéticos de qualidade.</p>
+        </article>
+        <article class="service-card">
+          <div class="text-4xl text-varnish mb-4 flex justify-center">🔌</div>
+          <h3 class="font-title text-xl">Eletrônica</h3>
+          <p class="mt-2 text-sm text-gray-300">Instalação e reparo de captadores, pré-amplificadores e sistemas de amplificação.</p>
+        </article>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

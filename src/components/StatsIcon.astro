@@ -1,0 +1,45 @@
+---
+interface Props {
+  type: 'pin' | 'guitar' | 'smile' | 'heart';
+}
+
+const { type } = Astro.props as Props;
+---
+
+{type === 'pin' && (
+  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 21s5-4.5 5-10a5 5 0 1 0-10 0c0 5.5 5 10 5 10Z" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="12" cy="11" r="1.7" fill="currentColor"/>
+  </svg>
+)}
+
+{type === 'guitar' && (
+  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M14 4l6 6-3 3-2-2-3 3a3 3 0 0 1-4.2 0l-.8-.8a3 3 0 0 1 0-4.2l3-3-2-2 3-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M7 17l-2.5 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="15.2" cy="8.8" r="1" fill="currentColor"/>
+    <circle cx="17.4" cy="11" r="1" fill="currentColor"/>
+  </svg>
+)}
+
+{type === 'smile' && (
+  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="9" cy="10" r="1.1" fill="currentColor"/>
+    <circle cx="15" cy="10" r="1.1" fill="currentColor"/>
+    <path d="M8.5 14.5c1.1 1.3 2.4 2 3.5 2s2.4-.7 3.5-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>
+)}
+
+{type === 'heart' && (
+  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M12 20s-7-4.4-7-9.7C5 7.8 6.8 6 9 6c1.4 0 2.6.7 3 1.8C12.4 6.7 13.6 6 15 6c2.2 0 4 1.8 4 4.3C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  </svg>
+)}
+
+<style>
+  svg {
+    color: #8B0000;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.35));
+  }
+</style>

@@ -1,62 +1,118 @@
-# Site Luthier 🎻
-Este é o repositório do site institucional e comercial para a oficina de lutheria. O objetivo é apresentar o catálogo de instrumentos, serviços de manutenção e facilitar o contato com clientes de forma rápida, elegante e otimizada para SEO. 
+# Site Luthier
 
-## 🛠️ Tecnologias 
-Para este projeto, priorizamos a velocidade e o baixo custo de manutenção:
-- **HTML5 & CSS3**: A base de tudo;
-- **Tailwind CSS** : Para um design customizado e artesanal sem escrever CSS complexo;
-- **JavaScript (Vanilla)**: Apenas para interações leves (menus mobile, modais de galeria);
-- **Astro**: Implementa lógica de componentes, o Astro é o melhor framework atual para sites estáticos focados em conteúdo.
+Site institucional e comercial para uma oficina de lutheria, construído como uma landing page de uma única página com navegação por seções.
 
-## Estrutura do Projeto 📂
-```
-luthier-website/
+## Objetivo
+
+Apresentar o estúdio de luthieria com uma interface elegante, escura e artesanal, focada em conversão, leitura rápida e navegação simples em desktop e celular.
+
+## Stack
+
+- Astro
+- Tailwind CSS
+- JavaScript vanilla para pequenas interações
+- SVG para logo e ícones do projeto
+
+## Estrutura atual
+
+```text
+SiteLuthier/
+├── public/
+│   └── robots.txt
 ├── src/
-│   ├── assets/          # Imagens dos instrumentos (otimizadas) e ícones
-│   ├── components/      # Partes reutilizáveis (Navbar, Footer, Card de Serviço)
-│   ├── styles/          # Configurações do Tailwind ou CSS Global
-│   └── pages/           # Arquivos HTML/Markdown para cada página
-├── public/              # Arquivos estáticos (favicon, robos.txt)
-├── tailwind.config.js   # Configuração de design (Cores: madeira, verniz, carvão)
-├── package.json         # Dependências do projeto
-└── README.md            # Documentação (esta aqui)
-``` 
-  
-## Mapa do Site (Arquitetura)🚧
+│   ├── components/
+│   │   ├── LogoPalheta.astro
+│   │   └── ServiceIcon.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── contato.astro
+│   │   ├── galeria.astro
+│   │   ├── servicos.astro
+│   │   └── sobre.astro
+│   └── styles/
+│       └── global.css
+├── package.json
+├── postcss.config.cjs
+├── tailwind.config.cjs
+└── README.md
+```
 
-- **Home**: Impacto visual com Hero Section (vídeo curto ou foto em alta do melhor instrumento);
+## O que já foi implementado
 
-- **Galeria (Portfolio)**: Fotos detalhadas de projetos finalizados;
+### Identidade visual
 
-- **Feedbacks**: Comentários positivos sobre o serviço; 
+- Logo em formato de palheta musical, feita em SVG.
+- Paleta com fundo carvão, vermelho-verniz e texto marfim.
+- Tipografia com Cormorant Garamond nos títulos e Inter no corpo.
 
-- **Serviços**: Regulagem, restauração, troca de trastes e construção;
+### Interface
 
-- **Sobre**: A história do luthier e sua filosofia de trabalho;
+- Layout em uma única página com navegação por âncoras.
+- Seções principais:
+  - Início
+  - Serviços
+  - Galeria
+  - Sobre
+  - Contato
+- Navbar fixa com menu desktop e menu mobile.
+- Footer com logo, identidade visual e links sociais.
 
-- **Contato**: Formulário simples e botão direto para WhatsApp.
+### Serviços e interações
 
-# Boas práticas 📈
+- Cards com ícones SVG substituindo emojis.
+- Hover nos cards com borda vermelha e efeito de destaque.
+- Botão CTA em estilo de palheta.
+- Scroll suave entre as seções.
+- Menu mobile funcional com abertura e fechamento ao clicar nos links.
 
-- **Otimização de Imagens**: Como o site terá muitas fotos de madeira e detalhes, usaremos o formato WebP para garantir que o site carregue em menos de 2 segundos.
+### Conteúdo
 
-- **SEO Local**: Configuração de Meta Tags para que o luthier seja encontrado na sua cidade/região.
+- Hero principal com chamada de ação.
+- Seção de serviços com os principais atendimentos da oficina.
+- Galeria com grid de imagens.
+- Seção “Sobre” com estatísticas e descrição da oficina.
+- Seção de contato com informações e formulário visual.
 
-- **Acessibilidade**: Garantir que o contraste de cores e navegação por teclado funcionem perfeitamente.
+## Como rodar
 
-## Mapa da interface 🎨
-Acerca da documentações de instruções para implementação da interface sugerida pela IA: **v0 Vercel**
+Instale as dependências:
 
+```bash
+npm install
+```
 
-[Clique aqui para ver a interface - acesso restrito](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39) 
+Inicie o servidor local:
 
-## Destaques da implementação
+```bash
+npm run dev
+```
 
-- **Paleta de cores**: Fundo carvão profundo, detalhes em vermelho-verniz e texto em branco-marfim
-- **Tipografia**: Cormorant Garamond (serifada elegante) para títulos e Inter (sans-serif limpa) para corpo de texto
-- **Hero**: Padrão sutil de cordas/trastes no fundo, logo em formato de palheta com "L" estilizado, e botão CTA com formato de palheta
-- **Serviços**: Cards com cantos arredondados imitando a curvatura da palheta, ícones minimalistas de luthieria
-- **Galeria**: Grid com molduras em acabamento de latão escovado, lightbox para visualização ampliada
-- **Contato**: Formulário com bordas em vermelho-verniz e botão de envio no formato exato da palheta
-- **Footer**: Design limpo com logo e redes sociais
+O Astro geralmente sobe em:
 
+```text
+http://localhost:4321/
+```
+
+Gere a versão de produção:
+
+```bash
+npm run build
+```
+
+## Observações técnicas
+
+- O projeto usa Tailwind via `postcss.config.cjs` e `tailwind.config.cjs`.
+- O CSS global está em `src/styles/global.css`.
+- A logo aceita variação de tamanho pelo componente `LogoPalheta.astro`.
+- Os serviços usam o componente `ServiceIcon.astro` para manter consistência visual.
+
+## Próximos passos possíveis
+
+- Trocar as imagens remotas da galeria por arquivos locais otimizados em WebP.
+- Tornar o formulário de contato funcional com envio real.
+- Adicionar animações de entrada mais refinadas.
+- Incluir SEO local com metadados e dados estruturados.
+
+## Referência visual
+
+A interface foi ajustada com base no protótipo visual anexado, priorizando fidelidade estética e navegação rápida em uma landing page única.

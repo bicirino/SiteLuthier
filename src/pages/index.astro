@@ -1,0 +1,307 @@
+---
+import LogoPalheta from '../components/LogoPalheta.astro'
+import ServiceIcon from '../components/ServiceIcon.astro'
+import StatsIcon from '../components/StatsIcon.astro'
+import '../styles/global.css'
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oficina Luthier — Restauração e Criação de Instrumentos</title>
+    <meta name="description" content="Oficina Luthier: restauração, regulagem e construção de instrumentos artesanais." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased">
+    <!-- NAVBAR -->
+    <header class="fixed w-full top-0 z-50 border-b border-gray-800 bg-gray-900/90 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+        <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
+          <LogoPalheta />
+          <span class="hidden sm:inline-block font-title text-lg text-ivory">Luthier</span>
+        </a>
+
+        <nav id="nav-menu" class="hidden md:flex items-center gap-8 text-sm uppercase tracking-wide text-gray-300">
+          <a href="#home" class="hover:text-varnish transition">Início</a>
+          <a href="#servicos" class="hover:text-varnish transition">Serviços</a>
+          <a href="#galeria" class="hover:text-varnish transition">Galeria</a>
+          <a href="#sobre" class="hover:text-varnish transition">Sobre</a>
+          <a href="#contato" class="hover:text-varnish transition">Contato</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/" class="hidden sm:inline-block px-4 py-2 bg-varnish text-ivory rounded-full hover:bg-red-700 transition">WhatsApp</a>
+          <button id="menu-toggle" class="md:hidden px-2 py-1 text-gray-300 text-2xl">☰</button>
+        </div>
+      </div>
+
+      <!-- MENU MOBILE -->
+      <nav id="mobile-menu" class="hidden md:hidden bg-gray-800/95 border-t border-gray-700">
+        <div class="flex flex-col space-y-3 px-6 py-4 text-sm uppercase text-gray-300">
+          <a href="#home" class="hover:text-varnish transition">Início</a>
+          <a href="#servicos" class="hover:text-varnish transition">Serviços</a>
+          <a href="#galeria" class="hover:text-varnish transition">Galeria</a>
+          <a href="#sobre" class="hover:text-varnish transition">Sobre</a>
+          <a href="#contato" class="hover:text-varnish transition">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero-pattern min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+      <div class="mb-8 flex items-center justify-center">
+        <LogoPalheta sizeClass="w-28 h-34 md:w-34 md:h-40" />
+      </div>
+      <h1 class="text-6xl md:text-7xl font-title text-ivory">Luthier</h1>
+      <p class="text-sm uppercase tracking-widest text-gray-400 mt-4">Conserto de Instrumentos Musicais</p>
+      <p class="mt-6 text-lg text-gray-300 max-w-2xl">Restauração e conserto de violões, guitarras e instrumentos de corda com excelência artesanal. Tradição e precisão em cada detalhe.</p>
+      <a href="#contato" class="cta-palheta mt-8">Agende sua Consulta</a>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="w-full bg-gray-950/50 py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-title text-center mb-4">Nossos Serviços</h2>
+        <p class="text-center text-gray-400 mb-12">Oferecemos uma gama completa de serviços de luthieria, desde ajustes simples até restaurações completas.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="service-card group">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="regulagem" />
+            </div>
+            <h3 class="font-title text-xl text-center">Regulagem Completa</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Ajuste de ação, traste e entonação para performance ideal.</p>
+          </article>
+          <article class="service-card group border border-gray-700">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="trastes" />
+            </div>
+            <h3 class="font-title text-xl text-center">Troca de Trastes</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Substituição com acabamento profissional em metal.</p>
+          </article>
+          <article class="service-card group">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="reparos" />
+            </div>
+            <h3 class="font-title text-xl text-center">Reparos Estruturais</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Conserto de rachaduras e restauração de partes.</p>
+          </article>
+          <article class="service-card group">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="acabamento" />
+            </div>
+            <h3 class="font-title text-xl text-center">Acabamento e Polimento</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Restauração do verniz e polimento profundo.</p>
+          </article>
+          <article class="service-card group">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="pestanas" />
+            </div>
+            <h3 class="font-title text-xl text-center">Pestanas e Rastilhos</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Fabricação em osso, tusq ou materiais sintéticos.</p>
+          </article>
+          <article class="service-card group">
+            <div class="flex justify-center mb-4">
+              <ServiceIcon type="eletronica" />
+            </div>
+            <h3 class="font-title text-xl text-center">Eletrônica</h3>
+            <p class="mt-2 text-sm text-gray-300 text-center">Instalação e reparo de captadores e amplificadores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="w-full py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-title text-center mb-4">Galeria de Trabalhos</h2>
+        <p class="text-center text-gray-400 mb-12">Conheça alguns dos instrumentos que passaram por nossas mãos. Cada peça recebe atenção única.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqiXH4c1acnIebu2xCLOIlUJG4wBMpm8ayj37-FZN5Hwt3vg8JFAHPb_7W74BxzguxR6uEogHUQ5qeDHByvS--5jpTGoPEN1DFyG1bGvSGbDCC7GV-QrqqnnlL91AplePqh1SCwQ=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipOOKxvJ-RDhlafbMkVtoS4fFS2XUZyLI22NLyfG=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHohiAiKmDMKD2_Ytm94ck2qlK0u-1yyx5ey90lRoxGSttVTlAY8ZIjXvqeOQJIrS0Jkbqu6mDtHrl-yxINDsQJN47urEmVvVd_GyA5J9un5TSOLhA8HogxuqNudbWEPY5HQ-QKIA=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="blob:https://gemini.google.com/b6032a55-0413-4abb-9ee8-e2648a669279" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipMOaQDjucZ8GWre6nzxKyeNdVpPCSvskgniaK-N=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipNcGsjx58WEmkzIpO2LqpxGGTuwVjlwi52YA2Pw=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdvRK1Mx-ioFKCQUxIL0QUkpXNs4_jgygTrTZiH33IV85bj0pATIaw1aHuAn043MwS4xmD8XoIUeiehvRMcifv_aGiPl3-qaVi-IXT3DhBCd8F3KOc1Jm5cU93Sa5KYbObN-3lPg=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipNlNylOYF_ojCqTULcKOxiNH2-N-KoJq8WP4bAP=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipNZUCeqLdZXqtvEI5azQP-riy-Gdjflufr5C2LD=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyDf_Cp3JB-F3Ig6e1uxUgCdDZxIAHMggGGo9NT5dnEQZC8ow3TtgL9Q4XnkhoJiGk-vhH_xZfmdIR2046Kd4b8ddeLcAbQO77-xcs_jr4XB-7n8XBH3oVZJU70Q1i8TLohSpj-g=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="https://lh3.googleusercontent.com/p/AF1QipNzcTKisN2H5G5ztFZalPynuktSyAKGMkd9k3Rk=s680-w680-h510-rw" alt="instrumento" loading="lazy"/></div>
+          <div class="gallery-card"><img src="blob:https://gemini.google.com/b878f822-6af9-4958-91bd-89763832fa30" alt="instrumento" loading="lazy"/></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="w-full bg-gray-950/50 py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex flex-col items-center justify-center">
+            <div class="text-7xl font-title font-bold text-varnish">25</div>
+            <p class="text-sm uppercase tracking-wider text-gray-400 mt-2">Anos de Tradição</p>
+            <div class="mt-12 space-y-6 text-gray-300">
+              <div class="flex items-start gap-4">
+                <span class="text-varnish mt-1"><StatsIcon type="pin" /></span>
+                <div>
+                  <p class="font-semibold text-ivory">25+</p>
+                  <p class="text-xs text-gray-400">Anos de Experiência</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-varnish mt-1"><StatsIcon type="guitar" /></span>
+                <div>
+                  <p class="font-semibold text-ivory">3000+</p>
+                  <p class="text-xs text-gray-400">Instrumentos Restaurados</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-varnish mt-1"><StatsIcon type="smile" /></span>
+                <div>
+                  <p class="font-semibold text-ivory">1500+</p>
+                  <p class="text-xs text-gray-400">Clientes Atendidos</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-varnish mt-1"><StatsIcon type="heart" /></span>
+                <div>
+                  <p class="font-semibold text-ivory">100%</p>
+                  <p class="text-xs text-gray-400">Dedicação</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-12 w-40 h-40 rounded-full bg-varnish flex items-center justify-center shadow-lg">
+              <p class="text-center">
+                <span class="text-3xl font-bold text-ivory">100%</span>
+                <p class="text-xs uppercase text-ivory mt-2">Artesanal</p>
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-4xl font-title mb-6">Sobre Nós</h2>
+            <p class="text-gray-300 mb-4">Há mais de duas décadas, dedicamos nossa paixão à arte da luthieria. Cada instrumento recebe atenção meticulosa e cuidado artesanal.</p>
+            <p class="text-gray-300 mb-4">Nossa oficina combina técnicas tradicionais com tecnologia moderna, garantindo resultados que respeitam a história do instrumento.</p>
+            <p class="text-gray-300 mb-6">Trabalhamos com os melhores materiais — madeiras nobres, ferragens de qualidade e acabamentos premium.</p>
+            
+            <h3 class="font-title text-lg mb-3">Nossa Filosofia</h3>
+            <p class="text-gray-300 text-sm">Cada instrumento é único. Nosso trabalho é personalizado, respeitando as características de cada peça.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="w-full py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-title text-center mb-4">Entre em Contato</h2>
+        <p class="text-center text-gray-400 mb-12">Agende uma avaliação ou tire suas dúvidas. Estamos prontos!</p>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="font-title text-xl mb-6">Informações</h3>
+            <div class="space-y-4 text-gray-300">
+              <div>
+                <p class="text-sm text-gray-400 uppercase">Endereço</p>
+                <p>Rua das Cordas, 123 - Centro</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400 uppercase">Telefone</p>
+                <p>(11) 99999-9999</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400 uppercase">E-mail</p>
+                <p>contato@luthier.com.br</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-400 uppercase">Horário</p>
+                <p>Seg - Sex: 9h às 18h</p>
+              </div>
+            </div>
+            <div class="mt-8 bg-gray-900/50 rounded-lg p-6 text-center border border-gray-800">
+              <div class="text-3xl text-varnish mb-2">📍</div>
+              <p class="text-sm text-gray-400">Rua das Cordas, 123 - Centro<br/>São Paulo - SP</p>
+            </div>
+          </div>
+
+          <form class="space-y-4">
+            <h3 class="font-title text-xl mb-6">Envie sua Mensagem</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <input class="contact-input" placeholder="Nome" />
+              <input class="contact-input" placeholder="seu@email.com" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <input class="contact-input" placeholder="(00) 00000-0000" />
+              <select class="contact-input">
+                <option>Selecione...</option>
+                <option>Violão</option>
+                <option>Guitarra</option>
+                <option>Baixo</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <textarea class="contact-input w-full h-32" placeholder="Descreva o serviço..."></textarea>
+            <div>
+              <button type="submit" class="cta-palheta">Enviar Mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full mt-12 bg-gray-900 border-t border-gray-800">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8">
+            <LogoPalheta />
+          </div>
+          <div class="text-sm text-gray-300">
+            <div class="font-semibold">Luthier</div>
+            <div class="text-xs text-gray-400">Conserto de instrumentos</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a class="w-8 h-8 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:bg-varnish hover:text-ivory transition">◐</a>
+          <a class="w-8 h-8 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:bg-varnish hover:text-ivory transition">◑</a>
+          <a class="w-8 h-8 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:bg-varnish hover:text-ivory transition">◒</a>
+        </div>
+
+        <div class="text-sm text-gray-400">© 2026 Luthier. Todos os direitos reservados.</div>
+      </div>
+    </footer>
+
+    <script>
+      // Menu Mobile Toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      // Fechar menu ao clicar em um link
+      const navLinks = document.querySelectorAll('#mobile-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu?.classList.add('hidden');
+        });
+      });
+
+      // Smooth scroll para âncoras
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

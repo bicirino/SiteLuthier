@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background-color: #0b0b0b;
+    color: #f8f4ee;
+  }
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+.hero-pattern {
+  background-image: linear-gradient(0deg, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px;
+}
+
+.cta-palheta{
+  display:inline-block;
+  background:linear-gradient(180deg,#a61b1b,#6f0f0f);
+  color:#f8f4ee;
+  padding:14px 36px;
+  border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6), inset 0 -6px 12px rgba(0,0,0,0.2);
+  font-weight:600;
+}
+
+.service-card{
+  border-radius:40px 40px 40px 40px / 60px 60px 20px 20px;
+  border:1px solid rgba(255,255,255,0.03);
+  padding:2rem;
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.2));
+  transition: all 0.3s ease;
+}
+
+.service-card:hover{
+  border-color:#8B0000;
+  border-width:2px;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.3), inset 0 0 20px rgba(139, 0, 0, 0.1);
+  transform:translateY(-4px);
+}
+
+.service-card:hover svg{
+  transform:scale(1.1);
+}
+
+.gallery-card{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:inset 0 0 0 6px #8B6F47;
+}
+
+.gallery-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:6px;
+  transition:transform 0.3s;
+}
+
+.gallery-card:hover img{
+  transform:scale(1.05);
+}
+
+.contact-input{
+  background:rgba(255,255,255,0.02);
+  border:1.5px solid rgba(139,0,0,0.4);
+  color:#f0ece6;
+  padding:0.75rem 1rem;
+  border-radius:6px;
+  font-size:0.875rem;
+  transition:border-color 0.2s;
+}
+
+.contact-input:focus{
+  outline:none;
+  border-color:#8B0000;
+  background:rgba(255,255,255,0.05);
+}
