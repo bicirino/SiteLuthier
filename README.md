@@ -22,7 +22,7 @@ luthier-website/
 └── README.md            # Documentação (esta aqui)
 ``` 
   
-## Mapa do Site (Arquitetura)🎨
+## Mapa do Site (Arquitetura)🚧
 
 - **Home**: Impacto visual com Hero Section (vídeo curto ou foto em alta do melhor instrumento);
 
@@ -43,3 +43,20 @@ luthier-website/
 - **SEO Local**: Configuração de Meta Tags para que o luthier seja encontrado na sua cidade/região.
 
 - **Acessibilidade**: Garantir que o contraste de cores e navegação por teclado funcionem perfeitamente.
+
+## Mapa da interface 🎨
+Acerca da documentações de instruções para implementação da interface sugerida pela IA: **v0 Vercel**
+
+
+ [Clique aqui para conferir a interface feita]([[https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39)](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39)) 
+
+## Destaques da implementação
+
+- **Paleta de cores**: Fundo carvão profundo, detalhes em vermelho-verniz e texto em branco-marfim
+- **Tipografia**: Cormorant Garamond (serifada elegante) para títulos e Inter (sans-serif limpa) para corpo de texto
+- **Hero**: Padrão sutil de cordas/trastes no fundo, logo em formato de palheta com "L" estilizado, e botão CTA com formato de palheta
+- **Serviços**: Cards com cantos arredondados imitando a curvatura da palheta, ícones minimalistas de luthieria
+- **Galeria**: Grid com molduras em acabamento de latão escovado, lightbox para visualização ampliada
+- **Contato**: Formulário com bordas em vermelho-verniz e botão de envio no formato exato da palheta
+- **Footer**: Design limpo com logo e redes sociais
+
