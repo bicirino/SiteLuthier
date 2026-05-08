@@ -48,7 +48,7 @@ luthier-website/
 Acerca da documentações de instruções para implementação da interface sugerida pela IA: **v0 Vercel**
 
 
- [Clique aqui para conferir a interface feita]([[https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39)](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39)) 
+[Clique aqui para ver a interface - acesso restrito](https://v0.app/chat/site-luthier-oyuPkT21Esz?ref=ECXH39) 
 
 ## Destaques da implementação
 
